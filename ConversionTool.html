@@ -10,7 +10,7 @@ they input for example 3 on a binary conversion -->
          <p>
             Enter a decimal number and the desired base to convert it to
          </p>
-         <input placeholder="Enter decimal number" type="text">
+         <input onkeypress="handle(event)" placeholder="Enter decimal number" type="text">
          <select id="selectid" name="selectname">
             <option value="binary">Binary</option>
             <option value="octal">Octal</option>
@@ -37,12 +37,32 @@ they input for example 3 on a binary conversion -->
                  radix = 16;
                  break;
              }
-
              document.getElementById("answer").innerHTML = val.toString(radix);
              e.preventDefault();
              return false;
-          }
+        }
          document.getElementById("button1").addEventListener("click",Answer);
+
+       function handle(e){
+             if(e.keyCode === 13){
+             var radix;
+             var radixStr = document.getElementById('selectid').value;
+             var val = parseInt(document.getElementsByTagName("input")[0].value);
+             switch(radixStr) {
+              case "binary":
+                radix = 2;
+                break;
+              case "octal":
+                radix = 8;
+                break;
+              case "hexadecimal":
+                radix = 16;
+                break;
+            }
+             	 document.getElementById("answer").innerHTML = val.toString(radix);
+            }
+         	return false;
+      }
        </script>
       </body>
 </html>
