@@ -1,17 +1,45 @@
-table
-{
-  border-radius: 5px;
-}
-
-th
-{
-  color: #434343
-}
-
-Tool{
-  width: "50%"
-  color: #434343
+.title {
+  text-align:center;
+  font-size: 30px;
+  padding-bottom: 20px;
 }
 body {
-    background-color: powderblue;
+  background: linear-gradient(to bottom, #90EE90, white);
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  margin: 100px;
+}
+
+table {
+  background: linear-gradient(to top, #DDA0DD, white);
+  text-align:center;
+  font-size: 30px;
+  border-radius:3px;
+  height: 80px;
+  margin: auto;
+  max-width: 900px;
+  padding: 20px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 20px;
+}
+tr, td{
+  border: 1px solid black;
+  background: white;
+}
+a {
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+  display: block;
+  text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    color: blue;
+}
+a:active {
+    text-decoration: underline;
 }
