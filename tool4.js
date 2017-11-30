@@ -1,3 +1,7 @@
+function Reset() {
+    location.reload();
+}
+
 function Truth8(){
 var t8 = document.getElementById("c0").value;
 var text8;
