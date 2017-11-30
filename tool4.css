@@ -1,0 +1,11 @@
+table
+{
+  padding: 20px;
+  float: left;
+}
+body
+{
+  position: absolute;
+  top:15%;
+  left:15%;
+}

@@ -36,10 +36,11 @@ a {
 }
 a:visited {
     text-decoration: none;
+    color: black;
 }
 a:hover {
     color: blue;
 }
 a:active {
-    text-decoration: underline;
+    color: pink;
 }
