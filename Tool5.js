@@ -25,7 +25,7 @@ function myFunction()
     {
         var Random = Dice[Math.floor(Math.random()*6)];
         result.push(Random)
-    }  
+    }
     for (j = 0; j < result.length; j++)
     {
       if (result[j] == 1)
