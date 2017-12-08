@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Number System Conversion</title>
+   <link rel="shortcut icon" href="https://raw.githubusercontent.com/t7buja00/DevBasicSkills2017-2/ConversionTool-Amendment/Math.ico" />
+   <link rel="stylesheet" href="MainPage.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+<div class="header">
+  <h1>Maths Functions</h1>
+</div>
+
+<div class="row">
+
+<div class="col-3 menu">
+  <ul>
+    <li><a href="MainPage.html">Home</a></li>
+    <li><a href="Tool2.html">Number System Outputs</a></li>
+    <li><a href="#">Combinatorics</a></li>
+    <li><a href="Tool4.html">Truth Tables</a></li>
+    <li><a href="Tool5.html">Random Values</a></li>
+    <li><a href="#">Number System Calculator</a></li>
+  </ul>
+</div>
+
+<div class="col-6">
+  <div class="pad">
+  <h3>Number System Conversion</h3>
+  <p>Enter a decimal number and the desired base to convert it to</p>
+  <input onkeypress="handle(event)" placeholder="Enter decimal number" type="text">
+  <select id="selectid" name="selectname">
+     <option value="binary">Binary</option>
+     <option value="octal">Octal</option>
+     <option value="hexadecimal">Hexadecimal</option>
+  </select>
+  <button id="button1" name="Button1">Convert</button>
+  <div class="answer" id="answer"></div>
+  </div>
+</div>
+
+
+<script>
+  var Answer = function(e) {
+      var radix;
+      var radixStr = document.getElementById('selectid').value;
+      var val = parseInt(document.getElementsByTagName("input")[0].value);
+      switch(radixStr) {
+        case "binary":
+          radix = 2;
+          break;
+        case "octal":
+          radix = 8;
+          break;
+        case "hexadecimal":
+          radix = 16;
+          break;
+      }
+      document.getElementById("answer").innerHTML = val.toString(radix);
+      e.preventDefault();
+      return false;
+ }
+  document.getElementById("button1").addEventListener("click",Answer);
+
+function handle(e){
+      if(e.keyCode === 13){
+      var radix;
+      var radixStr = document.getElementById('selectid').value;
+      var val = parseInt(document.getElementsByTagName("input")[0].value);
+      switch(radixStr) {
+       case "binary":
+         radix = 2;
+         break;
+       case "octal":
+         radix = 8;
+         break;
+       case "hexadecimal":
+         radix = 16;
+         break;
+     }
+        document.getElementById("answer").innerHTML = val.toString(radix);
+     }
+   return false;
+}
+</script>
+
+<div class="col-3 right">
+  <div class="aside">
+    <h2>Information</h2>
+    <p>This page and it's contents were designed and written by Jamie Burns and Leon Oelen</p>
+  </div>
+</div>
+
+</div>
+
+
+<div class="footer">
+  <p>For more please visit our github pages- <a href="https://github.com/t7buja00">Jamie</a> <a href="https://github.com/leono93">Leon</a> </p>
+</div>
+
+</body>
+</html>
