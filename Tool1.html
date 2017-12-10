@@ -1,34 +1,72 @@
-<!DOCTYPE html>
-<!-- Tool still misses one thing, it needs to warn the user if they try to input for example 3 on a binary conversion
- no idea how to fix this yet though -->
-<html>
-<head>
-  <title>Conversion Tool</title>
-  <script src="tool1.js"> </script>
-</head>
-<body>
-  <div class="panel">
-   <p>
-      Enter a number and the desired base to convert it to
-   </p>
-   <input maxlength="20" onkeypress="handle(event)" placeholder="Enter a number" type="text">
-          From:  <select id="selid" name="selname">
-          <option value="binary">Binary</option>
-          <option value="decimal">Decimal</option>
-          <option value="octal">Octal</option>
-          <option value="hexadecimal">Hexadecimal</option>
-          </select>
+ <!DOCTYPE html>
+ <html>
+ <head>
+    <title>Number System Outputs</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/t7buja00/DevBasicSkills2017-2/ConversionTool-Amendment/Math.ico" />
+    <link rel="stylesheet" href="MainPage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="tool1.js"> </script>
+ </head>
+ <body>
 
-          To:  <select id="selectid" name="selectname">
-          <option value="decimal">Decimal</option>
-          <option value="binary">Binary</option>
-          <option value="octal">Octal</option>
-          <option value="hexadecimal">Hexadecimal</option>
-          </select>
+ <div class="header">
+   <h1>Mathematical Functions</h1>
+ </div>
 
-          <button onclick = "convert();">Convert</button>
-  </div>
-  <div id="answer">  </div>
+ <div class="row">
+
+ <div class="col-3 menu">
+   <ul>
+     <li><a href="MainPage.html">Home</a></li>
+     <li><a href="Tool1.html" class="active">Number System Conversion</a></li>
+     <li><a href="Tool2.html">Number System Outputs</a></li>
+     <li><a href="Tool3.html">Combinatorics</a></li>
+     <li><a href="Tool4.html">Truth Tables</a></li>
+     <li><a href="Tool5.html">Random Values</a></li>
+     <li><a href="#">Number System Calculator</a></li>
+   </ul>
+ </div>
+
+ <div class="col-6">
+   <div class="panel">
+    <p>
+       Enter a number and the desired base to convert it to
+    </p>
+    <input maxlength="20" onkeypress="handle(event)" placeholder="Enter a number" type="text">
+           From:  <select id="selid" name="selname">
+           <option value="binary">Binary</option>
+           <option value="decimal">Decimal</option>
+           <option value="octal">Octal</option>
+           <option value="hexadecimal">Hexadecimal</option>
+           </select>
+
+           To:  <select id="selectid" name="selectname">
+           <option value="decimal">Decimal</option>
+           <option value="binary">Binary</option>
+           <option value="octal">Octal</option>
+           <option value="hexadecimal">Hexadecimal</option>
+           </select>
+
+           <button onclick = "convert();">Convert</button>
+   </div>
+
+   <div id="answer">  </div>
+
+  </body>
+ </div>
+
+ <div class="col-3 right">
+   <div class="aside">
+     <h2>Information</h2>
+     <p>This page and its contents were designed and written by Jamie Burns and Leon Oelen</p>
+   </div>
+ </div>
+
+ </div>
+
+ <div class="footer">
+   <p>For more please visit our github pages <a href="https://github.com/t7buja00">Jamie</a> <a href="https://github.com/leono93">Leon</a></p>
+ </div>
 
  </body>
  </html>

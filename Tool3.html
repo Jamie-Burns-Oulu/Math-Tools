@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Random Values</title>
+   <title>Combinatorics Tool</title>
    <link rel="shortcut icon" href="https://raw.githubusercontent.com/t7buja00/DevBasicSkills2017-2/ConversionTool-Amendment/Math.ico" />
    <link rel="stylesheet" href="MainPage.css">
-   <script src="Tool5.js"> </script>
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <script src="tool3.js"> </script>
 </head>
 <body>
 
@@ -20,27 +20,29 @@
     <li><a href="MainPage.html">Home</a></li>
     <li><a href="Tool1.html">Number System Conversion</a></li>
     <li><a href="Tool2.html">Number System Outputs</a></li>
-    <li><a href="Tool3.html">Combinatorics</a></li>
+    <li><a href="Tool3.html" class="active">Combinatorics</a></li>
     <li><a href="Tool4.html">Truth Tables</a></li>
-    <li><a href="Tool5.html" class="active">Random Values</a></li>
+    <li><a href="Tool5.html">Random Values</a></li>
     <li><a href="#">Number System Calculator</a></li>
   </ul>
 </div>
 
 <div class="col-6">
-  <div class="pad">
-  <h3>Random Values</h3>
-  <p>This shows the random values produced by a dice. Please enter an amount of times to roll and click roll.</p>
-  <input onkeypress="enterkey(event)" id="DiceCount" maxlength="6" size="8" placeholder="Roll count" type="text">
-  <button onclick = "myFunction();">Roll</button>
-  <p id="NaN"></p>
-  <p id="counter1"></p>
-  <p id="counter2"></p>
-  <p id="counter3"></p>
-  <p id="counter4"></p>
-  <p id="counter5"></p>
-  <p id="counter6"></p>
+  <div>
+  Types to choose from (n)    <input type="text" id="textfield1" size="10"/>
   </div>
+  <div>
+  Number chosen (r)           <input type="text" id="textfield2" size="10"/>
+  </div>
+  <select id="selectid" name="selectname">
+  <option value="0">Sampling with replacement</option>
+  <option value="1">Sampling without replacement</option>
+  </select><br>
+
+  <button id="button1" name="Button1" onclick="Calculate()">Start</button><br>
+  <input type="button" onclick="ClearFields()" value="Clear">
+
+  <div id="answer">  </div>
 </div>
 
 <div class="col-3 right">
@@ -53,7 +55,7 @@
 </div>
 
 <div class="footer">
-  <p>For more please visit our github pages- <a href="https://github.com/t7buja00">Jamie</a> <a href="https://github.com/leono93">Leon</a> </p>
+  <p>For more please visit our github pages <a href="https://github.com/t7buja00">Jamie</a> <a href="https://github.com/leono93">Leon</a></p>
 </div>
 
 </body>
