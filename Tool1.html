@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Tool still misses one thing, it needs to warn the user if they try to input for example 3 on a binary conversion
+ no idea how to fix this yet though -->
+<html>
+<head>
+  <title>Conversion Tool</title>
+  <script src="javascript0.js"> </script>
+</head>
+<body>
+  <div class="panel">
+   <p>
+      Enter a number and the desired base to convert it to
+   </p>
+   <input maxlength="20" onkeypress="handle(event)" placeholder="Enter a number" type="text">
+          From:  <select id="selid" name="selname">
+          <option value="binary">Binary</option>
+          <option value="decimal">Decimal</option>
+          <option value="octal">Octal</option>
+          <option value="hexadecimal">Hexadecimal</option>
+          </select>
+
+          To:  <select id="selectid" name="selectname">
+          <option value="decimal">Decimal</option>
+          <option value="binary">Binary</option>
+          <option value="octal">Octal</option>
+          <option value="hexadecimal">Hexadecimal</option>
+          </select>
+
+          <button onclick = "convert();">Convert</button>
+  </div>
+  <div id="answer">  </div>
+
+ </body>
+ </html>
