@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Random Values</title>
-  <link rel="shortcut icon" href="https://raw.githubusercontent.com/t7buja00/DevBasicSkills2017-2/ConversionTool-Amendment/Math.ico" />
-  <link rel="stylesheet" href="">
-  <script src="Tool5.js"> </script>
+   <title>Random Values</title>
+   <link rel="shortcut icon" href="https://raw.githubusercontent.com/t7buja00/DevBasicSkills2017-2/ConversionTool-Amendment/Math.ico" />
+   <link rel="stylesheet" href="MainPage.css">
+   <script src="Tool5.js"> </script>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-<p>Enter the amount of times you wish to roll the dice.</p>
-<input id="DiceCount" maxlength="6" size="6" placeholder="Roll count" type="text">
-<button onclick = "myFunction();">Click to roll</button>
-<p id="NaN"></p>
-<p id="counter1"></p>
-<p id="counter2"></p>
-<p id="counter3"></p>
-<p id="counter4"></p>
-<p id="counter5"></p>
-<p id="counter6"></p>
+
+<div class="header">
+  <h1>Maths Functions</h1>
+</div>
+
+<div class="row">
+
+<div class="col-3 menu">
+  <ul>
+    <li><a href="MainPage.html">Home</a></li>
+    <li><a href="Tool1.html">Number System Conversion</a></li>
+    <li><a href="Tool2.html">Number System Outputs</a></li>
+    <li><a href="#">Combinatorics</a></li>
+    <li><a href="Tool4.html">Truth Tables</a></li>
+    <li><a href="#">Number System Calculator</a></li>
+  </ul>
+</div>
+
+<div class="col-6">
+  <div class="pad">
+  <h3>Random Values</h3>
+  <p>This shows the random values produced by a dice. Please enter an amount of times to roll and click roll.</p>
+  <input onkeypress="enterkey(event)" id="DiceCount" maxlength="6" size="8" placeholder="Roll count" type="text">
+  <button onclick = "myFunction();">Roll</button>
+  <p id="NaN"></p>
+  <p id="counter1"></p>
+  <p id="counter2"></p>
+  <p id="counter3"></p>
+  <p id="counter4"></p>
+  <p id="counter5"></p>
+  <p id="counter6"></p>
+  </div>
+</div>
+
+<div class="col-3 right">
+  <div class="aside">
+    <h2>Information</h2>
+    <p>This page and it's contents were designed and written by Jamie Burns and Leon Oelen</p>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  <p>For more please visit our github pages- <a href="https://github.com/t7buja00">Jamie</a> <a href="https://github.com/leono93">Leon</a> </p>
+</div>
+
 </body>
 </html>

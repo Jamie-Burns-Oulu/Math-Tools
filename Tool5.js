@@ -1,3 +1,12 @@
+function enterkey(e)
+{
+  if(e.keyCode === 13){
+  return myFunction();
+  }
+  return true;
+}
+
+
 function myFunction()
 {
   var Dice = [ "1","2","3","4","5","6"]
@@ -61,5 +70,4 @@ function myFunction()
     document.getElementById("counter5").innerHTML =  "Number of Fives &#x2684 = "  +Fives;
     document.getElementById("counter6").innerHTML =  "Number of Sixes &#x2685 = "  +Sixes;
   }
-
 }
