@@ -2,16 +2,24 @@ function Reset() {
     location.reload();
 }
 
+var tf = new RegExp("[TF]");
+
 function Truth8(){
+document.getElementById("inst").style.color = "black";
 var t8 = document.getElementById("c0").value;
 var text8;
-if (t8 != "T" ) {
-    text8 = "T";
-  }  else {
-    text8 = "F";
+  if (tf.test(t8)){
+    if (t8 != "T" ) {
+        text8 = "T";}
+    else {
+        text8 = "F";}
   }
-  document.getElementById("c1").innerHTML = text8;
-  }
+  else {
+      text8 = "-";
+      document.getElementById("inst").style.color = "red";}
+
+document.getElementById("c1").innerHTML = text8;
+}
 
 function Truth9(){
 var t9 = document.getElementById("c2").value;

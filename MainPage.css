@@ -21,9 +21,9 @@ html {
 
 .header {
     color: #ffffff;
-    background: linear-gradient(135deg, black 0%, darkgrey 55%, lightgrey 80%, White 95%);
+    background: linear-gradient(135deg, black 0%, darkgrey 55%, darkblue 80%, darkgrey 95%);
     padding: 15px;
-    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 0px black;
 }
 
 .menu ul {
@@ -35,32 +35,28 @@ html {
 .menu li {
     padding: 8px;
     margin-bottom: 7px;
-    background: linear-gradient(135deg, black 0%, darkgrey 55%, lightgrey 80%, White 95%);
+    background: linear-gradient(135deg, black 0%, darkgrey 55%, darkblue 80%, darkgrey 95%);
     color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.menu li:hover {
-    background-color: pink;
+    box-shadow: 0 1px 3px lightgrey, 0 1px 2px lightgrey;
 }
 
 .aside {
-    background: linear-gradient(135deg, black 0%, darkgrey 55%, lightgrey 80%, White 95%);
+    background: linear-gradient(135deg, black 0%, darkgrey 55%, darkblue 80%, darkgrey 95%);
     padding: 15px;
     color: #ffffff;
     text-align: center;
     font-size: 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 3px lightgrey, 0 1px 2px lightgrey;
+    text-shadow: 1px 1px 10px black;
 }
 .pad
 {
   padding: 15px;
 }
 .footer {
-    background: linear-gradient(135deg, black 0%, darkgrey 55%, lightgrey 80%, White 95%);
+    background: linear-gradient(135deg, black 0%, darkgrey 55%, darkblue 80%, darkgrey 95%);
     color: #ffffff;
-    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 10px black;
     text-align: center;
     font-size: 12px;
     padding: 15px;
@@ -71,16 +67,32 @@ iframe{
 }
 
 h3 {
-  text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 0px lightgrey;
   text-decoration: underline;
 }
 
 p {
-  text-shadow: 0.5px 0.5px 0px rgba(0,0,0,0.2);
+  text-shadow: 0.5px 0.5px 0px lightgrey;
+}
+
+.aside p{
+   text-shadow: 1px 1px 10px black;
+   padding-left: 15px;
+   text-align: left;
+}
+
+.footer p{
+   text-shadow: 1px 1px 10px black;
+}
+.footer a{
+   text-shadow: 1px 1px 10px black;
+   display: inline;
+   text-decoration: none;
+   color: White;
 }
 
 a {
-  text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 0px black;
   display:block;
   text-decoration: none;
   color: White;
@@ -92,11 +104,13 @@ a:visited {
 }
 
 a:hover {
-    color: black;
+    color: #FFFF74;
+    text-decoration: underline;
+    text-shadow: 1px 1px 1px darkblue;
 }
 
 a:active {
-    color: pink;
+    color: #FFFF74;
 }
 
 .col-1 {width: 8.33%;}
@@ -119,8 +133,9 @@ a:active {
 }
 
 a.active {
-  color:#B22222;
-  text-decoration:underline;
+  color: #FFFF74;
+  text-decoration: underline;
+  text-decoration-style:double;
 }
 
 table
@@ -135,9 +150,32 @@ div.homepage ul li {
   padding: 20px;
   margin-bottom: 20px;
   font-size: 1.2em;
-  background: linear-gradient(135deg, #3a3a3a, darkgrey 55%, lightgrey 80%, White 95%);
+  background: linear-gradient(135deg, black 0%, darkgrey 55%, darkblue 80%, darkgrey 95%);
 }
 
 div.homepage h1 {
   padding: 20px;
+}
+
+#center{
+  padding-top: 25px;
+  text-align: center;
+}
+
+button {
+    background-color: white;
+    text-align: center;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+button:hover{
+    background-color: darkblue;
+    color: #FFFF74;
+}
+button:focus {
+  outline:0;
+}
+input:focus {
+  outline:0;
 }

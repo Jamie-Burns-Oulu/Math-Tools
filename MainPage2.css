@@ -1,0 +1,19 @@
+button {
+    background-color: white;
+    text-align: center;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+button:hover{
+    background-color: darkblue;
+    color: #FFFF74;
+}
+button:focus {
+  outline:0;
+}
+td {
+  float: left;
+    border: 1px solid black;
+    border-collapse: separate;
+}

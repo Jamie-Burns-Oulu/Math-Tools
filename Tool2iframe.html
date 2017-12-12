@@ -7,8 +7,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    <script src="tool2.js"> </script>
 </head>
-<body>
-<table>
+<body onload="hide();">
+<table align="center">
   <tr>
     <th>Decimal</td>
     <th>Binary</th>
@@ -16,10 +16,10 @@
     <th>Hexadecimal</th>
   </tr>
   <tr>
-    <th><button onclick = "Fill0();">Fill</button> <button onclick = "Clear0();">Clear</button></th>
-    <th><button onclick = "Fill1();">Fill</button> <button onclick = "Clear1();">Clear</button></th>
-    <th><button onclick = "Fill2();">Fill</button> <button onclick = "Clear2();">Clear</button></th>
-    <th><button onclick = "Fill3();">Fill</button> <button onclick = "Clear3();">Clear</button></th>
+    <th><button id="f0"onclick = "Fill0();this.hidden=true;">Fill</button> <button id="c0"onclick = "Clear0();this.hidden=true;">Clear</button></th>
+    <th><button id="f1"onclick = "Fill1();this.hidden=true;">Fill</button> <button id="c1"onclick = "Clear1();this.hidden=true;">Clear</button></th>
+    <th><button id="f2"onclick = "Fill2();this.hidden=true;">Fill</button> <button id="c2"onclick = "Clear2();this.hidden=true;">Clear</button></th>
+    <th><button id="f3"onclick = "Fill3();this.hidden=true;">Fill</button> <button id="c3"onclick = "Clear3();this.hidden=true;">Clear</button></th>
   </tr>
   <tr>
     <td id="D0">0</td>
