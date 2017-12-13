@@ -138,13 +138,14 @@ a.active {
   text-decoration-style:double;
 }
 
-table
-{
+table{
    display: inline;
    margin: auto;
    padding: 5px;
    padding-left: 15px;
 }
+
+
 
 div.homepage ul li {
   padding: 20px;

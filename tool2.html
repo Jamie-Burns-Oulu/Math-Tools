@@ -6,7 +6,7 @@
    <link rel="stylesheet" href="MainPage.css">
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-<body>
+<body onload="fill.hidden=true">
 
 <div class="header">
   <h1>Mathematical Functions</h1>
@@ -29,9 +29,12 @@
 <div class="col-6">
   <div class="pad">
   <h3>Number System Outputs</h3>
-  <p>Below is a list of Decimal numbers 1-50 and their counterparts in Binary, Octal and Hexadecimal.</p>
-  <iframe src="Tool2iframe.html" width="550" height="340"></iframe>
-
+  <p>Below is a list of Decimal numbers 1-500 and their counterparts in Binary, Octal and Hexadecimal.</p>
+<div id="center">
+  <button id="clear"onclick="iframe.hidden=true;fill.hidden=false;this.hidden=true;">Clear Table</button>
+  <button id="fill" onclick="location.reload();">Display Table</button>
+</div>
+  <iframe id="iframe" src="Tool2Table.html" width="550" height="340"></iframe>
 </div>
 </div>
 
