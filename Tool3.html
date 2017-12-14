@@ -28,19 +28,24 @@
 </div>
 
 <div class="col-6">
+  <h3>Combinatorics</h3>
+  <div class="">
+    <input type="radio" name="permOrComb" id="perm" checked onclick="Enable()">Permutation
+    <input type="radio" name="permOrComb" id="comb" onclick="Disable()">Combination
+  </div><p></p>
   <div>
-  Types to choose from (n)    <input type="text" id="textfield1" size="10"/>
+  Value (n)    <input type="text" id="textfield1" size="10"/>
   </div>
   <div>
-  Number chosen (r)           <input type="text" id="textfield2" size="10"/>
+  Times (r)    <input type="text" id="textfield2" size="10"/>
   </div>
   <select id="selectid" name="selectname">
   <option value="0">Sampling with replacement</option>
   <option value="1">Sampling without replacement</option>
   </select><br>
 
-  <button id="button1" name="Button1" onclick="Calculate()">Start</button><br>
-  <input type="button" onclick="ClearFields()" value="Clear">
+  <button id="button1" name="Button1" onclick="Calculate()">Calculate</button>
+  <button id="button"  name="button"  onclick=ClearFields()>Clear</button>
 
   <div id="answer">  </div>
 </div>

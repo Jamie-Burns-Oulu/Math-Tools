@@ -20,8 +20,14 @@ html {
 }
 
 .header {
-    color: #ffffff;
-    background: linear-gradient(135deg, black 0%, darkgrey 55%, darkblue 80%, darkgrey 95%);
+    color: #e5e5e5;
+    background: rgba(89,156,177,1);
+    background: -moz-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(89,156,177,1)), color-stop(7%, rgba(76,160,184,1)), color-stop(100%, rgba(155,199,212,1)));
+    background: -webkit-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: -o-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: -ms-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: linear-gradient(to right, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
     padding: 15px;
     text-shadow: 2px 2px 0px black;
 }
@@ -35,15 +41,27 @@ html {
 .menu li {
     padding: 8px;
     margin-bottom: 7px;
-    background: linear-gradient(135deg, black 0%, darkgrey 55%, darkblue 80%, darkgrey 95%);
-    color: #ffffff;
+    background: rgba(89,156,177,1);
+    background: -moz-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(89,156,177,1)), color-stop(7%, rgba(76,160,184,1)), color-stop(100%, rgba(155,199,212,1)));
+    background: -webkit-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: -o-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: -ms-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: linear-gradient(to right, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    color: #e5e5e5;
     box-shadow: 0 1px 3px lightgrey, 0 1px 2px lightgrey;
 }
 
 .aside {
-    background: linear-gradient(135deg, black 0%, darkgrey 55%, darkblue 80%, darkgrey 95%);
+    background: rgba(89,156,177,1);
+    background: -moz-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(89,156,177,1)), color-stop(7%, rgba(76,160,184,1)), color-stop(100%, rgba(155,199,212,1)));
+    background: -webkit-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: -o-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: -ms-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: linear-gradient(to right, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
     padding: 15px;
-    color: #ffffff;
+    color: #e5e5e5;
     text-align: center;
     font-size: 14px;
     box-shadow: 0 1px 3px lightgrey, 0 1px 2px lightgrey;
@@ -54,8 +72,14 @@ html {
   padding: 15px;
 }
 .footer {
-    background: linear-gradient(135deg, black 0%, darkgrey 55%, darkblue 80%, darkgrey 95%);
-    color: #ffffff;
+    background: rgba(89,156,177,1);
+    background: -moz-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(89,156,177,1)), color-stop(7%, rgba(76,160,184,1)), color-stop(100%, rgba(155,199,212,1)));
+    background: -webkit-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: -o-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: -ms-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    background: linear-gradient(to right, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+    color: #e5e5e5;
     text-shadow: 1px 1px 10px black;
     text-align: center;
     font-size: 12px;
@@ -104,13 +128,13 @@ a:visited {
 }
 
 a:hover {
-    color: #FFFF74;
-    text-decoration: underline;
-    text-shadow: 1px 1px 1px darkblue;
+    color: #85adad;
+    text-decoration: italic;
 }
 
 a:active {
-    color: #FFFF74;
+    color: #85adad;
+    text-decoration: italic;
 }
 
 .col-1 {width: 8.33%;}
@@ -133,9 +157,8 @@ a:active {
 }
 
 a.active {
-  color: #FFFF74;
-  text-decoration: underline;
-  text-decoration-style:double;
+  color: #85adad;
+  text-decoration: italic;
 }
 
 table{
@@ -151,7 +174,13 @@ div.homepage ul li {
   padding: 20px;
   margin-bottom: 20px;
   font-size: 1.2em;
-  background: linear-gradient(135deg, black 0%, darkgrey 55%, darkblue 80%, darkgrey 95%);
+  background: rgba(89,156,177,1);
+  background: -moz-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(89,156,177,1)), color-stop(7%, rgba(76,160,184,1)), color-stop(100%, rgba(155,199,212,1)));
+  background: -webkit-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+  background: -o-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+  background: -ms-linear-gradient(left, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
+  background: linear-gradient(to right, rgba(89,156,177,1) 0%, rgba(76,160,184,1) 7%, rgba(155,199,212,1) 100%);
 }
 
 div.homepage h1 {
@@ -163,6 +192,20 @@ div.homepage h1 {
   text-align: center;
 }
 
+input {
+    background-color: white;
+    margin: 4px 2px;
+    cursor: text;
+    border-radius: 4px;
+}
+
+ select {
+    background-color: white;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
 button {
     background-color: white;
     text-align: center;
@@ -172,7 +215,7 @@ button {
 }
 button:hover{
     background-color: darkblue;
-    color: #FFFF74;
+    color: #85adad;
 }
 button:focus {
   outline:0;

@@ -3,26 +3,98 @@ function ClearFields() {
      document.getElementById("textfield2").value = "";
 }
 
+function Disable() {
+  document.getElementById("selectid").disabled = true;
+}
+
+function Enable() {
+  document.getElementById("selectid").disabled = false;
+}
+
 function Calculate() {
-  if (document.getElementById("selectid").value == 0) {
-    var value = document.getElementById("textfield1").value;
-    var times = document.getElementById("textfield2").value;
-    var result = 1;
+  var value = document.getElementById("textfield1").value;
+  var times = document.getElementById("textfield2").value;
+  if (document.getElementById("perm").checked == true) {
+    if (value == "") {
+      document.getElementById("answer").innerHTML= "Please enter a value";
+    } else {
+      if (document.getElementById("selectid").value == 0) {
+        var result = 1;
 
-    for (var i = 1; i <= value; i++) {
-      result*=i;
+        var top = 1;
+        var bottom;
+        var bottom1 = 1;
+
+        if (times == "") {
+          for (var i = 1; i <= value; i++) {
+            result*=i;
+          }
+        } else {
+          for (var i = value; i >= 1; i--) {
+            top*=i;
+            bottom = value-times;
+          }
+          for (var k = bottom; k >= 1; k--) {
+            bottom1*=k;
+          }
+          console.log(top);
+          console.log(bottom);
+          result = top/bottom1;
+        }
+
+        document.getElementById("answer").innerHTML= "With replacement: " + result;
+      } else if (document.getElementById("selectid").value == 1) {
+
+        var result = 1;
+
+        if (times == "") {
+          for (var i = 1; i <= value; i++) {
+            result*=value;
+          }
+        } else {
+          for (var i = 1; i <= times; i++) {
+            result*=value;
+          }
+        }
+
+        document.getElementById("answer").innerHTML= "Without replacement: " + result;
+      }
     }
+  } else {
 
-    document.getElementById("answer").innerHTML= "With replacement " + result;
-  } else if (document.getElementById("selectid").value == 1) {
-    var value = document.getElementById("textfield1").value;
-    var result = document.getElementById("textfield1").value;
+    if (value == "") {
+      document.getElementById("answer").innerHTML= "Please enter a value";
+    } else {
 
-    for (var i = value-1; i > 1; i--) {
-      result*=i-1;
-    }
+      var result = 1;
 
-    document.getElementById("answer").innerHTML= "Without replacement " + result;
+      var top = 1;
+      var bottom;
+      var bottom1 = 1;
+      var bottomDone = 1;
+
+      if (times == "") {
+        for (var i = 1; i <= value; i++) {
+          result*=i;
+        }
+      } else {
+        for (var i = value; i >= 1; i--) {
+          top*=i;
+          bottom = value-times;
+        }
+
+        for (var j = 1; j <= times ; j++) {
+          bottom1*=j;
+        }
+
+        for (var k = bottom; k >= 1; k--) {
+          bottomDone*=k;
+        }
+        result = top/(bottomDone*bottom1);
+      }
+
+    document.getElementById("answer").innerHTML= "Combinations: " + result;
+   }
   }
 
 }
