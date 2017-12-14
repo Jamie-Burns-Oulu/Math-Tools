@@ -28,33 +28,31 @@
  </div>
 
  <div class="col-6">
+ <div class="pad">
    <h3>Number System Conversion</h3>
-   <div class="panel">
-    <p>
-       Enter a number and the desired base to convert it to
-    </p>
+  <p>Enter a number and the desired base to convert it to</p>
+
     <input maxlength="20" onkeypress="handle(event)" placeholder="Enter a number" type="text">
            From:  <select id="selid" name="selname">
-           <option value="binary">Binary</option>
-           <option value="decimal">Decimal</option>
-           <option value="octal">Octal</option>
-           <option value="hexadecimal">Hexadecimal</option>
+           <option value="Binary">Binary</option>
+           <option value="Decimal">Decimal</option>
+           <option value="Octal">Octal</option>
+           <option value="Hexadecimal">Hexadecimal</option>
            </select>
 
            To:  <select id="selectid" name="selectname">
-           <option value="decimal">Decimal</option>
-           <option value="binary">Binary</option>
-           <option value="octal">Octal</option>
-           <option value="hexadecimal">Hexadecimal</option>
+           <option value="Decimal">Decimal</option>
+           <option value="Binary">Binary</option>
+           <option value="Octal">Octal</option>
+           <option value="Hexadecimal">Hexadecimal</option>
            </select>
 
            <button onclick = "convert();">Convert</button>
-   </div>
 
-   <div id="answer">  </div>
+  <div id="center"> <div id="answer">  </div> </div>
 
-  </body>
  </div>
+</div>
 
  <div class="col-3 right">
    <div class="aside">

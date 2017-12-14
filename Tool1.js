@@ -14,31 +14,31 @@ function convert() {
   var val = parseInt(document.getElementsByTagName("input")[0].value);
   var dec;
     switch(from) {
-      case "binary":
+      case "Binary":
       dec = parseInt(val, 2);
       break;
-      case "octal":
+      case "Octal":
       dec =parseInt(val, 8);
       break;
-      case "decimal":
+      case "Decimal":
       dec =parseInt(val, 10);
       break;
-      case "hexadecimal":
+      case "Hexadecimal":
       dec =parseInt(val, 16);
       break;
       }
 
   switch(radixStr) {
-      case "binary":
+      case "Binary":
       radix = 2;
       break;
-      case "octal":
+      case "Octal":
       radix = 8;
       break;
-      case "decimal":
+      case "Decimal":
       radix = 10;
       break;
-      case "hexadecimal":
+      case "Hexadecimal":
       radix = 16;
       break;
     }
