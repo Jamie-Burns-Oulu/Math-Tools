@@ -60,7 +60,7 @@ function convert() {
 //Checks input for binary is valid
   else if (from === "Binary"){
           if (res0 || (isNaN(val))){
-            ans.innerHTML = "Please enter a Binary number.";
+            ans.innerHTML = "Please enter a "+from+" number.";
           }
           else{
             ans.innerHTML = "In "+ radixStr+":  " + dec.toString(radix);
@@ -78,7 +78,7 @@ function convert() {
 //Checks input for Octal is valid
   else if (from === "Octal"){
       if (res1 || (isNaN(val))){
-        ans.innerHTML = "Please enter an Octal number.";
+        ans.innerHTML = "Please enter an "+from+" number.";
       }
       else{
         ans.innerHTML = "In "+ radixStr+":  " + dec.toString(radix);
