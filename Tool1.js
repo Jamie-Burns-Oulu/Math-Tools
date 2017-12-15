@@ -18,7 +18,9 @@ function convert() {
   var hex = hexsafe.concat(valhex);
   var ans = document.getElementById("answer");
   var bincheck = new RegExp("[2-9]");
-  var res = bincheck.test(val);
+  var res0 = bincheck.test(val);
+  var octcheck = new RegExp("[8-9]");
+  var res1 = octcheck.test(val);
 
     switch(from) {
       case "Binary":
@@ -50,9 +52,14 @@ function convert() {
       break;
     }
 
+
+//Checks conversion selction options are valid
+  if (from === radixStr){
+    ans.innerHTML = "Please choose a valid conversion.";
+  }
 //Checks input for binary is valid
-  if (from === "Binary"){
-          if (res || (isNaN(val))){
+  else if (from === "Binary"){
+          if (res0 || (isNaN(val))){
             ans.innerHTML = "Please enter a Binary number.";
           }
           else{
@@ -68,7 +75,16 @@ function convert() {
               ans.innerHTML ="In "+ radixStr+":  " + dec.toString(radix);
           }
   }
-//Checks input for decmial and octal is a number
+//Checks input for Octal is valid
+  else if (from === "Octal"){
+      if (res1 || (isNaN(val))){
+        ans.innerHTML = "Please enter an Octal number.";
+      }
+      else{
+        ans.innerHTML = "In "+ radixStr+":  " + dec.toString(radix);
+      }
+  }
+//Checks input for Decmial is valid
   else if (isNaN(val)){
     ans.innerHTML = "Please enter a "+from+" number.";
   }
