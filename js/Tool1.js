@@ -84,7 +84,7 @@ function convert() {
         ans.innerHTML = "In "+ radixStr+":  " + dec.toString(radix);
       }
   }
-//Checks input for Decmial is valid
+//Checks input for Decimal is valid
   else if (isNaN(val)){
     ans.innerHTML = "Please enter a "+from+" number.";
   }

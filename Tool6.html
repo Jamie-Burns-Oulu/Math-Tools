@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>RGB Range Slider</title>
+   <link rel="shortcut icon" href="https://raw.githubusercontent.com/t7buja00/DevBasicSkills2017-2/ConversionTool-Amendment/Math.ico" />
+   <link rel="stylesheet" href="css\MainPage.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <style>
+   #slidecontainer {
+    width: 200px;
+}
+
+.sliderRed {
+    -webkit-appearance: none;
+    width: 100%;
+    outline: none;
+    background: #d3d3d3;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.sliderRed:hover {
+    opacity: 1;
+}
+
+.sliderRed::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: red;
+    cursor: pointer;
+}
+
+.sliderRed::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: red;
+  cursor: pointer;
+}
+
+.sliderGreen {
+    -webkit-appearance: none;
+    width: 100%;
+    outline: none;
+    background: #d3d3d3;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.sliderGreen:hover {
+    opacity: 1;
+}
+
+.sliderGreen::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: green;
+    cursor: pointer;
+}
+
+.sliderGreen::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: green;
+  cursor: pointer;
+}
+
+.sliderBlue {
+    -webkit-appearance: none;
+    width: 100%;
+    outline: none;
+    background: #d3d3d3;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.sliderBlue:hover {
+    opacity: 1;
+}
+
+.sliderBlue::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: blue;
+    cursor: pointer;
+}
+
+.sliderBlue::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: blue;
+  cursor: pointer;
+}
+
+#display{
+  width: 25%;
+  height: 5em;
+  background: #730aa2;
+  transition: background 100ms;
+  margin-top: 30px;
+  border: 1px solid #000;
+}
+
+input{
+  display: block;
+  width: 100%;
+}
+   </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Mathematical Functions</h1>
+</div>
+
+<div class="row">
+
+<div class="col-3 menu">
+  <ul>
+    <li><a href="MainPage.html">Home</a></li>
+    <li><a href="Tool1.html">Number System Conversion</a></li>
+    <li><a href="Tool2.html">Number System Outputs</a></li>
+    <li><a href="Tool3.html">Combinatorics</a></li>
+    <li><a href="Tool4.html">Truth Tables</a></li>
+    <li><a href="Tool5.html">Random Values</a></li>
+    <li><a href="Tool6.html" class="active">RGB Range Slider</a></li>
+  </ul>
+</div>
+
+<div class="col-6">
+  <div class="pad">
+    <h3>RGB Range Slider</h3>
+    <p>Drag the slider to display the current value.</p>
+
+    <div id="slidecontainer">
+      Red <input type="range" min="0" max="255" class="sliderRed" id="redRange" value="115">
+      <p>Value: <span id="red"></span></p>
+    </div><p></p>
+
+    <div id="slidecontainer">
+      Green <input type="range" min="0" max="255" class="sliderGreen" id="greenRange" value="10">
+      <p>Value: <span id="green"></span></p>
+    </div><p></p>
+
+    <div id="slidecontainer">
+      Blue <input type="range" min="0" max="255" class="sliderBlue" id="blueRange" value="162">
+      <p>Value: <span id="blue"></span></p>
+    </div>
+    <span>Hex value is: </span>
+    <span id="hex"></span>
+    <div id="display"></div>
+
+<script>
+      var sliderRed = document.getElementById("redRange");
+      var output = document.getElementById("red");
+      output.innerHTML = sliderRed.value;
+
+      sliderRed.oninput = function() {
+        output.innerHTML = this.value;
+      }
+
+      var sliderGreen = document.getElementById("greenRange");
+      var output2 = document.getElementById("green");
+      output2.innerHTML = sliderGreen.value;
+
+      sliderGreen.oninput = function() {
+        output2.innerHTML = this.value;
+      }
+
+      var sliderBlue = document.getElementById("blueRange");
+      var output3 = document.getElementById("blue");
+      output3.innerHTML = sliderBlue.value;
+
+      sliderBlue.oninput = function() {
+        output3.innerHTML = this.value;
+      }
+
+      var input = document.querySelectorAll("input");
+      for (var i = 0; i < input.length; i++){
+        input[i].addEventListener("input", function(){
+          var red = document.getElementById("redRange").value,
+              green = document.getElementById("greenRange").value,
+              blue = document.getElementById("blueRange").value;
+
+          var display = document.getElementById("display");
+
+          var red = sliderRed.value*1;
+          var redHex = red.toString(16);
+          var green = sliderGreen.value*1;
+          var greenHex = green.toString(16);
+          var blue = sliderBlue.value*1;
+          var blueHex = blue.toString(16);
+
+          if (redHex.length < 2) {
+            redHex="0"+redHex;
+          }
+          if (greenHex.length < 2) {
+            greenHex="0"+greenHex;
+          }
+          if (blueHex.length < 2) {
+            blueHex="0"+blueHex;
+          }
+          display.style.background = "#"+redHex+greenHex+blueHex;
+          console.log(redHex+greenHex+blueHex);
+          document.getElementById("hex").innerHTML = "#"+redHex+greenHex+blueHex;
+        });
+      }
+
+
+
+
+</script>
+
+  </div>
+</div>
+
+<div class="col-3 right">
+  <div class="aside">
+    <h2>Information</h2>
+    <p>This page and its contents were designed and written by Jamie Burns and Leon Oelen</p>
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  <p>For more please visit our github pages; <a href="https://github.com/leono93">Leon</a>, <a href="https://github.com/t7buja00">Jamie</a></p>
+</div>
+
+</body>
+</html>
