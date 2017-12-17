@@ -1,7 +1,10 @@
+
+//Reloads page to reset all options
 function Reset() {
     location.reload();
 }
 
+//Checks input and displays "not" response
 var tf = new RegExp("[TF]");
 
 function Truth8(){
@@ -21,17 +24,24 @@ var text8;
 document.getElementById("c1").innerHTML = text8;
 }
 
+//Checks input and displays "not" response
 function Truth9(){
 var t9 = document.getElementById("c2").value;
 var text9;
-if (t9 != "T" ) {
-  text9 = "T";
-}  else {
-  text9 = "F";
+if (tf.test(t9)){
+  if (t9 != "T" ) {
+      text9 = "T";}
+  else {
+      text9 = "F";}
 }
+else {
+    text9 = "-";
+    document.getElementById("inst").style.color = "red";}
+
 document.getElementById("c3").innerHTML = text9;
 }
 
+//Checks inputs and displays "and" response
 function Truth0(){
 var t0 = document.getElementById("a0").value;
 var t1 = document.getElementById("a1").value;
@@ -44,6 +54,7 @@ var text0;
     document.getElementById("a2").innerHTML = text0;
 }
 
+//Checks inputs and displays "and" response
 function Truth1(){
 var t2 = document.getElementById("a3").value;
 var t3 = document.getElementById("a4").value;
@@ -56,6 +67,7 @@ var text1;
     document.getElementById("a5").innerHTML = text1;
 }
 
+//Checks inputs and displays "and" response
 function Truth2(){
 var t4 = document.getElementById("a6").value;
 var t5 = document.getElementById("a7").value;
@@ -68,6 +80,7 @@ var text2;
     document.getElementById("a8").innerHTML = text2;
 }
 
+//Checks inputs and displays "and" response
 function Truth3(){
 var t6 = document.getElementById("a9").value;
 var t7 = document.getElementById("a10").value;
@@ -80,6 +93,7 @@ var text3;
     document.getElementById("a11").innerHTML = text3;
 }
 
+//Checks inputs and displays "or" response
 function Truth4(){
 var t0 = document.getElementById("b0").value;
 var t1 = document.getElementById("b1").value;
@@ -92,6 +106,7 @@ if (t0 === "T" || t1 === "T" ) {
 document.getElementById("b2").innerHTML = text4;
 }
 
+//Checks inputs and displays "or" response
 function Truth5(){
 var t2 = document.getElementById("b3").value;
 var t3 = document.getElementById("b4").value;
@@ -104,6 +119,7 @@ if (t2 === "T" || t3 === "T" ) {
 document.getElementById("b5").innerHTML = text5;
 }
 
+//Checks inputs and displays "or" response
 function Truth6(){
 var t4 = document.getElementById("b6").value;
 var t5 = document.getElementById("b7").value;
@@ -116,6 +132,7 @@ if (t4 === "T" || t5 === "T" ) {
 document.getElementById("b8").innerHTML = text6;
 }
 
+//Checks inputs and displays "or" response
 function Truth7(){
 var t6 = document.getElementById("b9").value;
 var t7 = document.getElementById("b10").value;

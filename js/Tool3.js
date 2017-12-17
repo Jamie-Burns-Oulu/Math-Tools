@@ -1,16 +1,20 @@
+//Clears input fields
 function ClearFields() {
      document.getElementById("textfield1").value = "";
      document.getElementById("textfield2").value = "";
 }
 
+//Disables no selected option
 function Disable() {
   document.getElementById("selectid").disabled = true;
 }
 
+//Enables selected option
 function Enable() {
   document.getElementById("selectid").disabled = false;
 }
 
+//Checks selections and inputs and performs relevant calculation
 function Calculate() {
   var value = document.getElementById("textfield1").value;
   var times = document.getElementById("textfield2").value;

@@ -1,3 +1,4 @@
+//Checks for enter key press and runs random function if pressed
 function enterkey(e)
 {
   if(e.keyCode === 13){
@@ -6,7 +7,7 @@ function enterkey(e)
   return true;
 }
 
-
+//Selects random numbers from array and counts outputs
 function myFunction()
 {
   var Dice = [ "1","2","3","4","5","6"]
